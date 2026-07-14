@@ -35,7 +35,7 @@ app.get("/test", (req, res) => {
     res.send("Hello")
 })
 
-app.get("/view-hackathon", async (req, res) => {
+app.post("/view-hackathon", async (req, res) => {
     const Hackathons = await hackathon.find()
     res.json(Hackathons)
 })
